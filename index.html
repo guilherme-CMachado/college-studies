@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburgueria</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-theme">
+    <header>
+        <h1>Bem-vindo à Hamburgueria</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="cart.html">Carrinho</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+    <section id="menu">
+        <h2>Nosso Menu</h2>
+        <div class="burger" id="burger1">
+            <div class="text-container">
+                <h3>Burger Clássico</h3>
+                <p>Delicioso burger com queijo, alface e tomate.</p>
+                <button onclick="addToCart(this, 'Burger Clássico')">Adicionar ao Carrinho</button>
+            </div>
+            <img src="images/classicBurguer.jpeg" alt="Burger Clássico" class="burger-image">
+        </div>
+        <div class="burger" id="burger2">
+            <div class="text-container">
+                <h3>Burger de Frango</h3>
+                <p>Suculento burger de frango com maionese especial.</p>
+                <button onclick="addToCart(this, 'Burger de Frango')">Adicionar ao Carrinho</button>
+            </div>
+            <img src="images/chickenBurguer.jpeg" alt="Burger de Frango" class="burger-image">
+        </div>
+        <div class="burger" id="burger3">
+            <div class="text-container">
+                <h3>Burger Vegano</h3>
+                <p>Incrível burger vegano com ingredientes frescos.</p>
+                <button onclick="addToCart(this, 'Burger Vegano')">Adicionar ao Carrinho</button>
+            </div>
+            <img src="images/veggieBurguer.jpeg" alt="Burger Vegano" class="burger-image">
+        </div>
+    </section>
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma hamburgueria dedicada a oferecer os melhores burgers da cidade, com ingredientes frescos e de alta qualidade.</p>
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Hamburgueria. Todos os direitos reservados.</p>
+    </footer>
+    <a href="cart.html" id="cart-icon" class="hidden">Carrinho (0)</a>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
